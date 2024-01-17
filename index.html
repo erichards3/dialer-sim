@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" /> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/site.css">
+    <title>Smartphone Dialer Simulator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sitcky text-end">
+        <button id="btnLightDark" type="button" class="btn">
+          <i class="bi bi-sun"></i>
+        </button>
+        <button id="btnMuteUnmute" type="button" class="btn">
+          <i class="bi bi-volume-up"></i>
+        </button>
+      </div>
+      <div class="row mt-5 justify-content-center">
+        <div class="col-md-4">
+          <div class="card border-0">
+            <div class="card-body">
+              <div class="row mt-5 text-center">
+                <!-- Row of inputs -->
+                <div id="entry" class="col-12 h1" style="height: 48px;"></div>
+              </div>
+              <div class="row mt-4 align-items-center">
+                <!-- First row of numbers -->
+                <div class="col-4">
+                  <div class="btn-group btn-block">
+                    <button id="dialerOne" type="button" class="btn btn-light circle" data-value="1">
+                      <div class="dial-digit ungrouped">1</div>
+                      <div class="dial-letter"></div>
+                    </button>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="btn-group btn-block">
+                    <button id="dialerTwo" type="button" class="btn btn-light circle" data-value="2">
+                      <div class="dial-digit">2</div>
+                      <div class="dial-letter">ABC</div>
+                    </button>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="btn-group btn-block">
+                    <button id="dialerThree" type="button" class="btn btn-light circle" data-value="3">
+                      <div class="dial-digit">3</div>
+                      <div class="dial-letter">DEF</div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-4 align-items-center">
+                <!-- Second row of numbers -->
+                <div class="col-4">
+                  <div class="btn-group btn-block">
+                    <button id="dialerFour" type="button" class="btn btn-light circle" data-value="4">
+                      <div class="dial-digit">4</div>
+                      <div class="dial-letter">GHI</div>
+                    </button>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="btn-group btn-block">
+                    <button id="dialerFive" type="button" class="btn btn-light circle" data-value="5">
+                      <div class="dial-digit">5</div>
+                      <div class="dial-letter">JKL</div>
+                    </button>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="btn-group btn-block">
+                    <button id="dialerSix" type="button" class="btn btn-light circle" data-value="6">
+                      <div class="dial-digit">6</div>
+                      <div class="dial-letter">MNO</div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-4 align-items-center">
+                <!-- Third row of numbers -->
+                <div class="col-4">
+                  <div class="btn-group btn-block">
+                    <button id="dialerSeven" type="button" class="btn btn-light circle" data-value="7">
+                      <div class="dial-digit">7</div>
+                      <div class="dial-letter">PQRS</div>
+                    </button>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="btn-group btn-block">
+                    <button id="dialerEight" type="button" class="btn btn-light circle" data-value="8">
+                      <div class="dial-digit">8</div>
+                      <div class="dial-letter">TUV</div>
+                    </button>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="btn-group btn-block">
+                    <button id="dialerNine" type="button" class="btn btn-light circle" data-value="9">
+                      <div class="dial-digit">9</div>
+                      <div class="dial-letter">WXYZ</div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-4 align-items-center">
+                <!-- Fourth row of numbers -->
+                <div class="col-4">
+                  <div class="btn-group btn-block">
+                    <button id="dialerStar" type="button" class="btn btn-light circle" data-value="*">
+                      <div class="dial-digit">*</div>
+                    </button>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="btn-group btn-block">
+                    <button id="dialerZero" type="button" class="btn btn-light circle" data-value="0">
+                      <div class="dial-digit">0</div>
+                    </button>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="btn-group btn-block">
+                    <button id="dialerPound" type="button" class="btn btn-light circle" data-value="#">
+                      <div class="dial-digit">#</div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-4 align-items-center">
+                <!-- Fifth row for misc -->
+                <div class="offset-4 col-4">
+                  <div class="btn-group btn-block">
+                    <button id="dialerCall" type="button" class="btn btn-success circle">
+                      <i class="bi bi-telephone-fill"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="btn-group btn-block">
+                    <button id="dialerDelete" type="button" class="btn btn-light circle">
+                      <i class="bi bi-backspace"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="js/site.js"></script>
+  </body>
+</html>

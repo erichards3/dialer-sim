@@ -1,0 +1,26 @@
+i {
+    font-size: xx-large;
+}
+
+.circle {
+    width: 80px;
+    height: 80px;
+    padding: 13px 18px;
+    border-radius: 50px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.dial-digit {
+    font-size: 1.95rem;
+    margin-top: -0.5rem;
+}
+
+.dial-digit.ungrouped {
+    margin-top: -1.75rem
+}
+
+.dial-letter {
+    font-size: 0.75rem;
+    margin-top: -0.5rem;
+}
