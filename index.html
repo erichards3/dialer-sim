@@ -13,20 +13,26 @@
   <body>
     <div class="container">
       <div class="sitcky text-end">
-        <button id="btnLightDark" type="button" class="btn">
+        <button id="btnInfo" type="button" class="btn" data-toggle="modal" data-target="#infoModal">
+          <i class="bi bi-info-circle"></i>
+        </button>
+        <button id="btnLightDark" type="button" class="btn" data-toggle="tooltip" title="Toggle theme">
           <i class="bi bi-sun"></i>
         </button>
-        <button id="btnMuteUnmute" type="button" class="btn">
+        <button id="btnMuteUnmute" type="button" class="btn" data-toggle="tooltip" title="Toggle sound">
           <i class="bi bi-volume-up"></i>
         </button>
-      </div>
+        <a class="btn" type="button" href="https://github.com/erichards3/dialer-sim" target="_blank" data-toggle="tooltip" title="Show me the code">
+          <i class="bi bi-github"></i>
+        </a>
+      </div>      
       <div class="row mt-5 justify-content-center">
         <div class="col-md-4">
           <div class="card border-0">
             <div class="card-body">
               <div class="row mt-5 text-center">
                 <!-- Row of inputs -->
-                <div id="entry" class="col-12 h1" style="height: 48px;"></div>
+                <div id="entry" class="col-12 h1 text-truncate" style="height: 48px;"></div>
               </div>
               <div class="row mt-4 align-items-center">
                 <!-- First row of numbers -->
@@ -151,6 +157,38 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="infoModalLabel">Info</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              This website was designed to replicate a common smarphone dialer for the purposes of teaching
+              children how to dial a number in the case of an emergency. Use this to help a child get familiar with 
+              dialing their parents' phone numbers or that of another trusted family member or friend. Or use this 
+              for whatever other purposes you desire!
+            </p>
+            <p><strong>No data entered on this site is collected or preserved in any way shape or form.</strong></p>
+            <p>
+              Also, pressing the "<i class="bi bi-telephone-fill" style="font-size: small;"></i>" button does not 
+              place a real phone call. This is just a simulator and offers no actual calling functionality.
+            </p>
+            <p>This page was developed by Eddie! All rights reserved and stuff.</p>
+            <p>Let's get some tAcos!</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>

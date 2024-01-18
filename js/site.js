@@ -39,7 +39,7 @@ $(document).ready(function () {
 
   $("#dialerCall").click(function () {
     if (phoneNumber.length == 0) return;
-    
+
     var ring = playTone("resources/audio/tone_ringing.mp3", true);
 
     alert("Calling " + phoneNumber + "...");
@@ -85,4 +85,7 @@ $(document).ready(function () {
   });
 
   reset();
+
+  // enable tooltips
+  $('[data-toggle="tooltip"]').tooltip();
 });
